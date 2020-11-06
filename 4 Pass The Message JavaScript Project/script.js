@@ -7,5 +7,4 @@ submitBtn.addEventListener('click', (e) => {
   let inputText = document.getElementById('empty-field').value;
   messageTxt.innerHTML = inputText;
   document.getElementById('empty-field').value = ' ';
-
 })
