@@ -14,6 +14,6 @@ container.style.backgroundColor = "cornflowerblue";
 button.addEventListener("click", changeBackground);
 
 function changeBackground() {
-  const colorIndex = parseInt(Math.random() * colors.length);
-  container.style.backgroundColor = colors[colorIndex];
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  container.style.backgroundColor = randomColor;
 }
