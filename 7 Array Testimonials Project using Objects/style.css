@@ -28,6 +28,10 @@ body {
   align-items: center;
 }
 
+#customer-text {
+  width: 500px;
+}
+
 span {
   margin: 5%;
   padding: 5px;
