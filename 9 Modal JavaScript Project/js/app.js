@@ -34,7 +34,14 @@ function modal() {
 
   leftBtn.addEventListener('click', () => {
     counter--;
-    console.log(counter);
+    if(counter < 0) {
+      counter = imageList.length - 1;
+    }
+    boxItem.style.backgroundImage = `url(${imageList[counter]})`;
+  })
+
+  const close = document.querySelector('.lightbox-close').addEventListener('click', () => {
+    boxContainer.classList.remove('show');
   })
 }
 
