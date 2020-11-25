@@ -13,7 +13,7 @@
         </div>
         <form>
             <p>How much is the bill ?</p>
-            <input type="number" id="abount" placeholder="0" maxlength="9">
+            <input type="number" id="amount" placeholder="0" maxlength="9">
             <p>How was your service</p>
             <select id="tip">
                 <option value="0.05">5% Poor</option>
@@ -22,7 +22,7 @@
                 <option value="0.2">20% Excellent</option>
             </select>
             <p>How many people sharing the Bill ?</p>
-            <input type="number" id="people" placeholder="0">
+            <input type="number" value="1" id="people">
         </form>
         <button id="calc">Calculate</button>
         <div class="single">
@@ -30,9 +30,9 @@
             <p>Total: $<span class="totalBill"></span></p>
         </div>
         <div class="multiple">
-            <p>Tip per person: <span class="totalTipMultiple"></span></p>
-            <p>Total per person: <span class="totalAmounteach"></span></p>
-            <p>Bill total: <span class="billTotalMultiple"></span></p>
+            <p>Tip per person: $<span class="totalTipMultiple"></span></p>
+            <p>Bill each person: $<span class="totalAmountEach"></span></p>
+            <p>Bill total: $<span class="billTotalMultiple"></span></p>
         </div>
     </div>
 
