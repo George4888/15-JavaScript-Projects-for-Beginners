@@ -69,3 +69,7 @@ body {
   color: white;
   cursor: pointer;
 }
+
+.cart-item img {
+  height: 200px;
+}
