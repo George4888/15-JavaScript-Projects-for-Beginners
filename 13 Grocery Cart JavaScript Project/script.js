@@ -6,6 +6,7 @@ const buyButton = document.getElementById('buy');
 addButton.forEach(button => {
     button.addEventListener('click', createSelectedItem);
 });
+clearButton.addEventListener('click', clearCart);
 
 function createSelectedItem(event) {
     const selectedimage = event.target.parentElement;
@@ -50,4 +51,13 @@ function calcTotal() {
     }, 0);
 
     document.querySelector('#total').textContent = totalMoney;
+}
+
+function clearCart() {
+    document.querySelector('#total').textContent = '0';
+    const allItems = document.querySelectorAll('.cart-item');
+
+    allItems.forEach(item => {
+        item.remove();
+    });
 }
