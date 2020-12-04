@@ -73,3 +73,8 @@ body {
 .cart-item img {
   height: 200px;
 }
+
+.all {
+  font-size: 2rem;
+  color: white;
+}
