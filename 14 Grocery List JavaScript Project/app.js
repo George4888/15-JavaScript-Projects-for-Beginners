@@ -3,11 +3,16 @@ const clearButton = document.querySelector('.displayItems-clear');
 const itemsList = document.querySelector('.displayItems-title');
 
 addButton.addEventListener('click', addItem);
+clearButton.addEventListener('click', clearList);
 
 function addItem(e) {
     e.preventDefault();
 
     let itemName = document.querySelector('.addItems-input').value;
+
+    if (itemName === '') {
+        alert('Please add grocery item');
+    } else {
     const newDiv = document.createElement('div');
     newDiv.classList.add('grocery-item');
 
@@ -23,4 +28,12 @@ function addItem(e) {
     trash.innerHTML = `<i class="far fa-trash-alt"></i>`;
 
     newDiv.appendChild(trash);
+    }
+}
+
+function clearList() {
+    const list = document.querySelectorAll('.grocery-item');
+    list.forEach(item => {
+        item.remove();
+    })
 }
