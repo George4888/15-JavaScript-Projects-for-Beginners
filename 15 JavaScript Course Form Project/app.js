@@ -1,22 +1,19 @@
 console.log('start');
 
-const name = document.getElementById('name');
-const course = document.getElementById('course');
-const author = document.getElementById('author');
 const subBtn = document.getElementById('submitBtn');
-const courseList = document.getElementById('list');
 
 subBtn.addEventListener('click', regCourse);
 
 function regCourse() {
-    processData();
+    checkFields();
 };
 
 // colect input data
 function processData() {
-    const nameInput = document.getElementById('name').value;
-    const courseInput = document.getElementById('course').value;
-    const authorInput = document.getElementById('author').value;
+    let nameInput = document.getElementById('name').value;
+    let courseInput = document.getElementById('course').value;
+    let authorInput = document.getElementById('author').value;
+    const courseList = document.getElementById('list');
 
     const newDiv = document.createElement('div');
     newDiv.classList.add('cours-box');
@@ -35,6 +32,28 @@ function processData() {
 
     courseList.appendChild(newDiv);
     newDiv.appendChild(person);
-    person.appendChild(persCourse);
-    persCourse.appendChild(courseAuth);
+    newDiv.appendChild(persCourse);
+    newDiv.appendChild(courseAuth);
+
+    clearFields();
+}
+
+// clear fields after submit
+function clearFields() {
+    document.getElementById('name').value = '';
+    document.getElementById('course').value = '';
+    document.getElementById('author').value = '';
+}
+
+// field validation
+function checkFields() {
+    let name = document.getElementById('name').value;
+    let course = document.getElementById('course').value;
+    let author = document.getElementById('author').value;
+
+    if(name === '' || course === '' || author === '') {
+        return alert('Please complete all required fields');
+    } else {
+        processData();
+    }
 }
