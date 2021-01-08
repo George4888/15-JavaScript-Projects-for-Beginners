@@ -18,6 +18,10 @@ function processData() {
     const newDiv = document.createElement('div');
     newDiv.classList.add('cours-box');
 
+    const image = document.createElement('img');
+    image.setAttribute('src', `./img/cust-${randomNumber()}.jpg`);
+    image.classList.add('photo');
+
     const person = document.createElement('p');
     person.classList.add('user');
     person.innerHTML = `User name - ${nameInput}`;
@@ -31,6 +35,7 @@ function processData() {
     courseAuth.innerHTML = `Course author - ${authorInput}`;
 
     courseList.appendChild(newDiv);
+    newDiv.appendChild(image);
     newDiv.appendChild(person);
     newDiv.appendChild(persCourse);
     newDiv.appendChild(courseAuth);
@@ -56,4 +61,9 @@ function checkFields() {
     } else {
         processData();
     }
+}
+
+function randomNumber() {
+    let random = Math.floor(Math.random() * 6);
+    return random;
 }
