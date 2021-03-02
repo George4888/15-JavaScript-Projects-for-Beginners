@@ -1,1 +1,1 @@
-# 100-JavaScript-Projects-for-Beginners
+# 15-JavaScript-Projects-for-Beginners
